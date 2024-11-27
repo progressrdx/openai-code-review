@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="maven action">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="maven action" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +32,9 @@
     &quot;accountId&quot;: &quot;711157c8-bcfa-42de-b3b9-76a885c945ec&quot;
   }
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
@@ -131,7 +132,7 @@
       <workItem from="1732635215311" duration="462000" />
       <workItem from="1732687281832" duration="4028000" />
       <workItem from="1732695879319" duration="425000" />
-      <workItem from="1732696317358" duration="353000" />
+      <workItem from="1732696317358" duration="1102000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -189,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732695656328</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="maven action">
+      <created>1732696882874</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732696882874</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
