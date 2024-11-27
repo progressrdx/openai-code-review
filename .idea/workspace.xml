@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="maven action">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main-maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main-maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +142,7 @@
       <workItem from="1732635215311" duration="462000" />
       <workItem from="1732687281832" duration="4028000" />
       <workItem from="1732695879319" duration="425000" />
-      <workItem from="1732696317358" duration="4885000" />
+      <workItem from="1732696317358" duration="6615000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -227,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732700297910</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="maven action">
+      <created>1732708474525</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732708474525</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
