@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="init project">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/main-maven.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main-local.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="maven action">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main-maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main-maven.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +137,7 @@
       <workItem from="1732634771861" duration="25000" />
       <workItem from="1732634814485" duration="376000" />
       <workItem from="1732635215311" duration="462000" />
-      <workItem from="1732687281832" duration="3142000" />
+      <workItem from="1732687281832" duration="3632000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -157,7 +155,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732247460304</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="maven action">
+      <option name="closed" value="true" />
+      <created>1732695026373</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732695026373</updated>
+    </task>
+    <task id="LOCAL-00004" summary="maven action">
+      <option name="closed" value="true" />
+      <created>1732695168910</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732695168910</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +202,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="init project" />
+    <MESSAGE value="maven action" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven action" />
   </component>
 </project>
