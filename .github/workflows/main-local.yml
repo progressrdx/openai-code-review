@@ -24,6 +24,8 @@ jobs:
           distribution: 'temurin'  # 你可以选择其他发行版，如 'adopt' 或 'zulu'
           java-version: '11'
 
+
+
       - name: Run Java code
         run: |
           cd openai-code-review-sdk/src/main/java
