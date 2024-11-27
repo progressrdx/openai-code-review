@@ -27,8 +27,8 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: copy openai-code-review-sdk jar
-        run: mvn dependency:copy -Dartifact=org.rdx:openai-code-review-sdk -DoutputDirectory=./libs
+      - name: Copy openai-code-review-sdk JAR
+        run: mvn dependency:copy -Dartifact=org.rdx:openai-code-review-sdk:1.0 -DoutputDirectory=./libs
 
       - name: run code review
         run: java -jar ./libs/openai-code-review-sdk:1.0.jar

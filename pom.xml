@@ -53,6 +53,11 @@
                 <version>4.13.2</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.rdx</groupId>
+                <artifactId>openai-code-review-sdk</artifactId>
+                <version>1.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
