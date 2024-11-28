@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="maven action" />
+    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="maven action">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/OpenAiCodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/OpenAiCodeReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-test/src/test/java/org/rdx/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-test/src/test/java/org/rdx/test/ApiTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,7 +143,7 @@
       <workItem from="1732635215311" duration="462000" />
       <workItem from="1732687281832" duration="4028000" />
       <workItem from="1732695879319" duration="425000" />
-      <workItem from="1732696317358" duration="8458000" />
+      <workItem from="1732696317358" duration="10261000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -246,7 +250,35 @@
       <option name="project" value="LOCAL" />
       <updated>1732712669307</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="maven action">
+      <created>1732714296207</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732714296207</updated>
+    </task>
+    <task id="LOCAL-00016" summary="maven action">
+      <created>1732714335950</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732714335950</updated>
+    </task>
+    <task id="LOCAL-00017" summary="maven action">
+      <created>1732714466917</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732714466917</updated>
+    </task>
+    <task id="LOCAL-00018" summary="maven action">
+      <created>1732714557306</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732714557306</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
