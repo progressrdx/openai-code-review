@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="maven action">
+    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="V2 test">
+      <change afterPath="$PROJECT_DIR$/doc/curl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/ChatCompletionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/ChatCompletionSyncResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/types/util/BearerTokenUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/OpenAiCodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/OpenAiCodeReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/org/rdx/sdk/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/org/rdx/sdk/test/ApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openai-code-review-test/src/test/java/org/rdx/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-test/src/test/java/org/rdx/test/ApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -39,13 +47,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven/apache-maven-3.8.8" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
@@ -61,6 +62,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ApiTest.test.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -80,7 +82,7 @@
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "spring.configuration.checksum": "adb577e2358743fc0a6603a446f640cd",
     "vue.rearranger.settings.migration": "true",
     "应用程序.OpenAiCodeReview.executor": "Run"
@@ -91,9 +93,12 @@
       <recent name="D:\javacode\study\openai-code-review\openai-code-review-test\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="应用程序.OpenAiCodeReview">
     <configuration name="OpenAiCodeReview" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8 (2)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.rdx.sdk.OpenAiCodeReview" />
+      <module name="openai-code-review-sdk" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.rdx.sdk.*" />
@@ -104,6 +109,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApiTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="openai-code-review-sdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.rdx.sdk.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.rdx.sdk.test" />
+      <option name="MAIN_CLASS_NAME" value="org.rdx.sdk.test.ApiTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.testGML" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="openai-code-review-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.rdx.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.rdx.test" />
+      <option name="MAIN_CLASS_NAME" value="org.rdx.test.ApiTest" />
+      <option name="METHOD_NAME" value="testGML" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="curl.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/doc/curl.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/doc" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
+      <option name="INTERPRETER_PATH" value="$PROJECT_DIR$/../../../GIt/Git/bin/bash.exe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="openai-code-review-test" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.rdx.Application" />
@@ -111,9 +163,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.ApiTest.test" />
+      <item itemvalue="JUnit.ApiTest.testGML" />
+      <item itemvalue="Shell Script.curl.sh" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="应用程序.OpenAiCodeReview" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.OpenAiCodeReview" />
+        <item itemvalue="JUnit.ApiTest.test" />
+        <item itemvalue="JUnit.ApiTest.testGML" />
+        <item itemvalue="Shell Script.curl.sh" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +205,17 @@
       <workItem from="1732635215311" duration="462000" />
       <workItem from="1732687281832" duration="4028000" />
       <workItem from="1732695879319" duration="425000" />
-      <workItem from="1732696317358" duration="10261000" />
+      <workItem from="1732696317358" duration="13597000" />
+      <workItem from="1732793698781" duration="600000" />
+      <workItem from="1732885057983" duration="862000" />
+      <workItem from="1732886191147" duration="46000" />
+      <workItem from="1732886255800" duration="7000" />
+      <workItem from="1732886276019" duration="35000" />
+      <workItem from="1732886316776" duration="379000" />
+      <workItem from="1732944239262" duration="750000" />
+      <workItem from="1732951269444" duration="33000" />
+      <workItem from="1732976720309" duration="37000" />
+      <workItem from="1732976763815" duration="2977000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -278,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732714557306</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="V2 test">
+      <created>1732762227935</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732762227935</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +389,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
     <MESSAGE value="maven action" />
-    <option name="LAST_COMMIT_MESSAGE" value="maven action" />
+    <MESSAGE value="V2 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="V2 test" />
   </component>
 </project>

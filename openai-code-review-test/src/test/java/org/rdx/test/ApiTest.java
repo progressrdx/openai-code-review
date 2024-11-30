@@ -3,6 +3,8 @@ package org.rdx.test;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import org.rdx.sdk.types.util.BearerTokenUtils;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -22,5 +24,10 @@ public class ApiTest {
         System.out.println("aaa3");
         System.out.println("aaa4");
     }
-
+    @Test
+    public void testGML(){
+        String apiKeySecret = "a7ce6f4ab128d3403ae7bb5e89edc699.33DZiyacos8M4e5d";
+        String token = BearerTokenUtils.getToken(apiKeySecret);
+        System.out.println(token);
+    }
 }
