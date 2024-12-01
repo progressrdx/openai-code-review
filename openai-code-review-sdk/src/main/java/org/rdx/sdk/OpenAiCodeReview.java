@@ -4,7 +4,9 @@ import com.alibaba.fastjson2.JSON;
 import org.eclipse.jgit.api.AddCommand;
 import org.eclipse.jgit.api.CommitCommand;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.transport.PushResult;
+import org.eclipse.jgit.transport.TrackingRefUpdate;
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.rdx.sdk.domain.model.ChatCompletionRequest;
 import org.rdx.sdk.domain.model.ChatCompletionSyncResponse;
@@ -121,13 +123,15 @@ public class OpenAiCodeReview {
         try(FileWriter writer =new FileWriter(newFile)){
             writer.write(log);
         }
-        AddCommand addCommand = git.add().addFilepattern(dateFolderName + "/" + fileName);
-        System.out.println("addCommand:"+addCommand.isUpdate());
-        CommitCommand commitCommand = git.commit().setMessage("Add New File via github Action");
-        System.out.println("commitCommand:"+commitCommand.getMessage());
-        Iterable<PushResult> call = git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(token, "")).call();
-
-        System.out.println("Change has been pushed to the repository");
+        git.add().addFilepattern(dateFolderName + "/" + fileName).call();
+        System.out.println("add");
+        git.commit().setMessage("Add New File via github Action").call();
+        System.out.println("commit");
+        Iterable<PushResult> pushResults = git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(token, "")).call();
+        for (PushResult result : pushResults) {
+            System.out.println(result);
+        }
+            System.out.println("All changes pushed to remote repository successfully.");
 
         return "https://github.com/progressrdx/openai-code-review-log/blob/main/"+dateFolderName+"/"+fileName;
 
