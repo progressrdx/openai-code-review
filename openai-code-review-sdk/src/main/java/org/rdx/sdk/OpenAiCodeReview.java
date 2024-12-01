@@ -1,7 +1,10 @@
 package org.rdx.sdk;
 
 import com.alibaba.fastjson2.JSON;
+import org.eclipse.jgit.api.AddCommand;
+import org.eclipse.jgit.api.CommitCommand;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.transport.PushResult;
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.rdx.sdk.domain.model.ChatCompletionRequest;
 import org.rdx.sdk.domain.model.ChatCompletionSyncResponse;
@@ -120,9 +123,12 @@ public class OpenAiCodeReview {
         }
         System.out.println("New file created: " + newFile.getAbsolutePath());
         System.out.println("file:"+dateFolderName+"/"+fileName);
-        git.add().addFilepattern(dateFolderName+"/"+fileName);
-        git.commit().setMessage("Add New File via github Action");
-        git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(token,"")).call();
+        AddCommand addCommand = git.add().addFilepattern(dateFolderName + "/" + fileName);
+        System.out.println("addCommand:"+addCommand);
+        CommitCommand commitCommand = git.commit().setMessage("Add New File via github Action");
+        System.out.println("commitCommand:"+commitCommand);
+        Iterable<PushResult> call = git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(token, "")).call();
+        System.out.println("Call:"+call.toString());
 
         System.out.println("Change has been pushed to the repository");
 
