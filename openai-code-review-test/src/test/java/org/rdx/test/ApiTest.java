@@ -20,9 +20,6 @@ public class ApiTest {
     @Test
     public void test(){
         System.out.println("aaa1");
-        System.out.println("aaa2");
-        System.out.println("aaa3");
-        System.out.println("aaa4");
     }
     @Test
     public void testGML(){
