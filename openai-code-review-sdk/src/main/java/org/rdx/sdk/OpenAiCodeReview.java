@@ -119,6 +119,7 @@ public class OpenAiCodeReview {
         try(FileWriter writer =new FileWriter(newFile)){
             writer.write(log);
         }
+        System.out.println("New file created: " + newFile.getAbsolutePath());
         git.add().addFilepattern(dateFolderName+"/"+fileName);
         git.commit().setMessage("Add New File via github Action");
         git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(token,"")).call();
