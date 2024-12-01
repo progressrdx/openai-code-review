@@ -29,7 +29,6 @@ public class OpenAiCodeReview {
         if (null == token || token.isEmpty()) {
             throw new RuntimeException("token is null");
         }
-//        String token = "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";
         // 1. 代码检出
         ProcessBuilder processBuilder = new ProcessBuilder("git", "diff", "HEAD~1", "HEAD");
         processBuilder.directory(new File("."));
