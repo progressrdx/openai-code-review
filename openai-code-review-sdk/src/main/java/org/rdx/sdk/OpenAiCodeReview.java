@@ -102,14 +102,15 @@ public class OpenAiCodeReview {
     }
 
     private static String codeLog(String log,String token)throws Exception{
+        File repoDir = new File("D:/javacode/study/repo");
         Git git =Git.cloneRepository()
                 .setURI("https://github.com/progressrdx/openai-code-review-log.git")
-                .setDirectory(new File("repo"))
+                .setDirectory(repoDir)
                 .setCredentialsProvider(new UsernamePasswordCredentialsProvider(token,""))
                 .call();
 
         String dateFolderName =new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-        File dateFolder =new File("repo/"+dateFolderName);
+        File dateFolder =new File(repoDir,dateFolderName);
         if (!dateFolder.exists()){
             dateFolder.mkdirs();
         }
