@@ -121,14 +121,11 @@ public class OpenAiCodeReview {
         try(FileWriter writer =new FileWriter(newFile)){
             writer.write(log);
         }
-        System.out.println("New file created: " + newFile.getAbsolutePath());
-        System.out.println("file:"+dateFolderName+"/"+fileName);
         AddCommand addCommand = git.add().addFilepattern(dateFolderName + "/" + fileName);
-        System.out.println("addCommand:"+addCommand);
+        System.out.println("addCommand:"+addCommand.isUpdate());
         CommitCommand commitCommand = git.commit().setMessage("Add New File via github Action");
-        System.out.println("commitCommand:"+commitCommand);
+        System.out.println("commitCommand:"+commitCommand.getMessage());
         Iterable<PushResult> call = git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(token, "")).call();
-        System.out.println("Call:"+call.toString());
 
         System.out.println("Change has been pushed to the repository");
 
