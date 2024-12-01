@@ -34,5 +34,5 @@ jobs:
       - name: run code review
         run: java -jar ./libs/openai-code-review-sdk-1.0.jar
         env:
-          GITHUB_TOKEN: ${{ secrets.CODELOG }
+          GITHUB_TOKEN: ${{ secrets.CODELOG }}
 
