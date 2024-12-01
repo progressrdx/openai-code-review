@@ -10,8 +10,10 @@ import org.eclipse.jgit.transport.TrackingRefUpdate;
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 import org.rdx.sdk.domain.model.ChatCompletionRequest;
 import org.rdx.sdk.domain.model.ChatCompletionSyncResponse;
+import org.rdx.sdk.domain.model.Message;
 import org.rdx.sdk.domain.model.Model;
 import org.rdx.sdk.types.util.BearerTokenUtils;
+import org.rdx.sdk.types.util.WXAccessTokenUtils;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -21,6 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * @ author rdx
@@ -59,6 +62,8 @@ public class OpenAiCodeReview {
         //3.写入日志
         String url = codeLog(log, token);
         System.out.println("log url:"+url);
+        //4.消息通知
+        pushMessage(url);
     }
 
     private static String codeReview(String diffCode)throws Exception{
@@ -136,6 +141,45 @@ public class OpenAiCodeReview {
         return "https://github.com/progressrdx/openai-code-review-log/blob/main/"+dateFolderName+"/"+fileName;
 
     }
+    private static void pushMessage(String logUrl) {
+        String accessToken = WXAccessTokenUtils.getAccessToken();
+        System.out.println(accessToken);
+
+        Message message = new Message();
+        message.put("project", "big-market");
+        message.put("review", logUrl);
+        message.setUrl(logUrl);
+        message.setTemplate_id("PqnBIWgXyY39Wd9Gmi1dTOYl-dSXt54j7tH-ktVdIU0");
+        message.setTouser("ozC5u64VgZVYAS-p0E1V0sTD1ICw");
+        String url = String.format("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s", accessToken);
+        sendPostRequest(url, JSON.toJSONString(message));
+    }
+
+
+    private static void sendPostRequest(String urlString, String jsonBody) {
+        try {
+            URL url = new URL(urlString);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "application/json; utf-8");
+            conn.setRequestProperty("Accept", "application/json");
+            conn.setDoOutput(true);
+
+            try (OutputStream os = conn.getOutputStream()) {
+                byte[] input = jsonBody.getBytes(StandardCharsets.UTF_8);
+                os.write(input, 0, input.length);
+            }
+
+            try (Scanner scanner = new Scanner(conn.getInputStream(), StandardCharsets.UTF_8.name())) {
+                String response = scanner.useDelimiter("\\A").next();
+                System.out.println(response);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
     private static String generateRandomString(int length) {
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         Random random = new Random();
