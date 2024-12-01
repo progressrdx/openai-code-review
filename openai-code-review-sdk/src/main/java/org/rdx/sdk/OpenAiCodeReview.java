@@ -102,15 +102,14 @@ public class OpenAiCodeReview {
     }
 
     private static String codeLog(String log,String token)throws Exception{
-        File repoDir = new File("D:/javacode/study/repo");
         Git git =Git.cloneRepository()
                 .setURI("https://github.com/progressrdx/openai-code-review-log.git")
-                .setDirectory(repoDir)
+                .setDirectory(new File("repo"))
                 .setCredentialsProvider(new UsernamePasswordCredentialsProvider(token,""))
                 .call();
 
         String dateFolderName =new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-        File dateFolder =new File(repoDir,dateFolderName);
+        File dateFolder =new File("repo/" + dateFolderName);
         if (!dateFolder.exists()){
             dateFolder.mkdirs();
         }
@@ -120,6 +119,7 @@ public class OpenAiCodeReview {
             writer.write(log);
         }
         System.out.println("New file created: " + newFile.getAbsolutePath());
+        System.out.println("file:"+dateFolderName""+"/"+fileName);
         git.add().addFilepattern(dateFolderName+"/"+fileName);
         git.commit().setMessage("Add New File via github Action");
         git.push().setCredentialsProvider(new UsernamePasswordCredentialsProvider(token,"")).call();
