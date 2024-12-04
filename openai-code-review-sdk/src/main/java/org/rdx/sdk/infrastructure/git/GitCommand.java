@@ -47,8 +47,10 @@ private Logger logger = LoggerFactory.getLogger(GitCommand.class);
     public String getCodeDiff() throws Exception {
         //获取最新提交的hash值
         String hash = getLatestCommitHash();
+        System.out.println(hash);
         //通过最新提交的hash值获取代码差异
         String diffCode = getCommitDiff(hash);
+        System.out.println(diffCode);
 
         return diffCode;
     }
