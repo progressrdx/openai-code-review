@@ -66,7 +66,7 @@ private Logger logger = LoggerFactory.getLogger(GitCommand.class);
         ){
             String line;
             while((line= diffReader.readLine())!= null){
-                builder.append("line").append(System.lineSeparator());
+                builder.append(line).append(System.lineSeparator());
             }
             String errorLine;
             while((errorLine = errorReader.readLine())!=null){
