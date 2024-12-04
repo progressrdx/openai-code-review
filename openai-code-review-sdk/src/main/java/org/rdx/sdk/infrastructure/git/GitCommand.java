@@ -82,7 +82,7 @@ private Logger logger = LoggerFactory.getLogger(GitCommand.class);
     }
 
     private String getLatestCommitHash()throws Exception {
-        ProcessBuilder processBuilder = new ProcessBuilder("git", "log", "-1", "--pretty-format:%H");
+        ProcessBuilder processBuilder = new ProcessBuilder("git", "log", "-1", "--pretty=format:%H");
         processBuilder.directory(new File("."));
         Process process = processBuilder.start();
 
