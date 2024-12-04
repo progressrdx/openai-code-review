@@ -109,7 +109,7 @@
                     <archive>
                         <manifest>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                            <mainClass>org.rdx.sdk.OpenAiCodeReview</mainClass>
+                            <mainClass>org.rdx.sdk.OpenAiReviewSDK</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
