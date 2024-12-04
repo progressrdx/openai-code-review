@@ -102,7 +102,7 @@ private Logger logger = LoggerFactory.getLogger(GitCommand.class);
     }
     public String commitAndPush(String recommend) throws Exception {
         Git git = Git.cloneRepository()
-                .setURI(githubReviewLogUri + ".git")
+                .setURI(githubReviewLogUri )
                 .setDirectory(new File("repo"))
                 .setCredentialsProvider(new UsernamePasswordCredentialsProvider(githubToken, ""))
                 .call();
