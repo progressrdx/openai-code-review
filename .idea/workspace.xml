@@ -4,17 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="V2 test">
-      <change afterPath="$PROJECT_DIR$/doc/curl.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/ChatCompletionRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/ChatCompletionSyncResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/types/util/BearerTokenUtils.java" afterDir="false" />
+    <list default="true" id="0ca4aee0-3322-4794-b440-b905df25400e" name="更改" comment="wx v1">
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/OpenAiReviewSDK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/service/AbstractOpenAiCodeReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/service/IOpenAiCodeReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/service/Impl/OpenAiCodeReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/infrastructure/git/GitCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/infrastructure/openai/DTO/ChatCompletionRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/infrastructure/openai/DTO/ChatCompletionSyncResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/infrastructure/openai/IOpenAi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/infrastructure/openai/Impl/ChatGMLImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/infrastructure/weixin/DTO/TemplateMessageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/infrastructure/weixin/WeiXin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/types/util/RandomStringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main-maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main-maven.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/OpenAiCodeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/OpenAiCodeReview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/org/rdx/sdk/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/test/java/org/rdx/sdk/test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai-code-review-test/src/test/java/org/rdx/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-test/src/test/java/org/rdx/test/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/ChatCompletionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/ChatCompletionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/types/weixin/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/domain/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/types/enums/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/types/util/WXAccessTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/openai-code-review-sdk/src/main/java/org/rdx/sdk/types/util/WXAccessTokenUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,6 +62,9 @@
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -60,37 +74,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ApiTest.test.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Application.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/javacode/study/openai-code-review",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "spring.configuration.checksum": "adb577e2358743fc0a6603a446f640cd",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.OpenAiCodeReview.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ApiTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/javacode/study/openai-code-review&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;adb577e2358743fc0a6603a446f640cd&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.OpenAiCodeReview.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\javacode\study\openai-code-review\openai-code-review-test\src\test\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.rdx.sdk.infrastructure.openai.DTO" />
     </key>
   </component>
   <component name="RunManager" selected="应用程序.OpenAiCodeReview">
@@ -216,6 +233,8 @@
       <workItem from="1732951269444" duration="33000" />
       <workItem from="1732976720309" duration="37000" />
       <workItem from="1732976763815" duration="2977000" />
+      <workItem from="1733242208782" duration="6693000" />
+      <workItem from="1733285053980" duration="133000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -357,7 +376,151 @@
       <option name="project" value="LOCAL" />
       <updated>1732762227935</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="CODE-LOG v1">
+      <option name="closed" value="true" />
+      <created>1733022880505</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733022880505</updated>
+    </task>
+    <task id="LOCAL-00021" summary="CODE-LOG v2">
+      <option name="closed" value="true" />
+      <created>1733023050160</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733023050160</updated>
+    </task>
+    <task id="LOCAL-00022" summary="CODE-LOG v2">
+      <option name="closed" value="true" />
+      <created>1733023224955</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1733023224955</updated>
+    </task>
+    <task id="LOCAL-00023" summary="CODE-LOG v3">
+      <option name="closed" value="true" />
+      <created>1733025323377</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1733025323377</updated>
+    </task>
+    <task id="LOCAL-00024" summary="CODE-LOG v4">
+      <option name="closed" value="true" />
+      <created>1733025779462</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1733025779462</updated>
+    </task>
+    <task id="LOCAL-00025" summary="CODE-LOG v5">
+      <option name="closed" value="true" />
+      <created>1733026520239</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733026520239</updated>
+    </task>
+    <task id="LOCAL-00026" summary="CODE-LOG v5">
+      <option name="closed" value="true" />
+      <created>1733026606050</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733026606050</updated>
+    </task>
+    <task id="LOCAL-00027" summary="CODE-LOG v5">
+      <option name="closed" value="true" />
+      <created>1733028259479</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733028259479</updated>
+    </task>
+    <task id="LOCAL-00028" summary="CODE-LOG v6">
+      <option name="closed" value="true" />
+      <created>1733030881776</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1733030881776</updated>
+    </task>
+    <task id="LOCAL-00029" summary="CODE-LOG v6">
+      <option name="closed" value="true" />
+      <created>1733031497759</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1733031497759</updated>
+    </task>
+    <task id="LOCAL-00030" summary="CODE-LOG v6">
+      <option name="closed" value="true" />
+      <created>1733032257704</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1733032257704</updated>
+    </task>
+    <task id="LOCAL-00031" summary="CODE-LOG v7">
+      <option name="closed" value="true" />
+      <created>1733032628747</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1733032628747</updated>
+    </task>
+    <task id="LOCAL-00032" summary="CODE-LOG v7">
+      <option name="closed" value="true" />
+      <created>1733034173352</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733034173352</updated>
+    </task>
+    <task id="LOCAL-00033" summary="CODE-LOG v8">
+      <option name="closed" value="true" />
+      <created>1733034284700</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1733034284700</updated>
+    </task>
+    <task id="LOCAL-00034" summary="CODE-LOG v9">
+      <option name="closed" value="true" />
+      <created>1733034561711</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733034561711</updated>
+    </task>
+    <task id="LOCAL-00035" summary="CODE-LOG v9">
+      <option name="closed" value="true" />
+      <created>1733034833455</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1733034833455</updated>
+    </task>
+    <task id="LOCAL-00036" summary="CODE-LOG v9">
+      <option name="closed" value="true" />
+      <created>1733035407240</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1733035407240</updated>
+    </task>
+    <task id="LOCAL-00037" summary="wx v1">
+      <option name="closed" value="true" />
+      <created>1733040959783</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1733040959784</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,6 +553,16 @@
     <MESSAGE value="init project" />
     <MESSAGE value="maven action" />
     <MESSAGE value="V2 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="V2 test" />
+    <MESSAGE value="CODE-LOG v1" />
+    <MESSAGE value="CODE-LOG v2" />
+    <MESSAGE value="CODE-LOG v3" />
+    <MESSAGE value="CODE-LOG v4" />
+    <MESSAGE value="CODE-LOG v5" />
+    <MESSAGE value="CODE-LOG v6" />
+    <MESSAGE value="CODE-LOG v7" />
+    <MESSAGE value="CODE-LOG v8" />
+    <MESSAGE value="CODE-LOG v9" />
+    <MESSAGE value="wx v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="wx v1" />
   </component>
 </project>

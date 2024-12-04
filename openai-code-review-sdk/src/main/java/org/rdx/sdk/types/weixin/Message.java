@@ -1,4 +1,4 @@
-package org.rdx.sdk.domain.model;
+package org.rdx.sdk.types.weixin;
 
 import java.util.HashMap;
 import java.util.Map;

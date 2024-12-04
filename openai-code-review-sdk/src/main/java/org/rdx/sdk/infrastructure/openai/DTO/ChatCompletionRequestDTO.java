@@ -1,4 +1,4 @@
-package org.rdx.sdk.domain.model;
+package org.rdx.sdk.infrastructure.openai.DTO;
 
 import org.rdx.sdk.types.enums.Model;
 
@@ -9,7 +9,7 @@ import java.util.List;
  * @ describe :
  * @ date  2024/11/30
  **/
-public class ChatCompletionRequest {
+public class ChatCompletionRequestDTO {
     private String model = Model.GLM_4_FLASH.getCode();
     private List<Prompt> messages;
 
